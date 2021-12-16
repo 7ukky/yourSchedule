@@ -19,9 +19,10 @@ import sample.database.DatabaseHandler;
 import sample.database.StaticSubject;
 import sample.database.User;
 
-import java.io.IOException;;
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -60,22 +61,10 @@ public class SignInController {
     private String password;
     public static String email;
 
-    public void showScene(String window) {
-        try {
-            root = FXMLLoader.load(getClass().getResource(window));
-            scene = new Scene(root);
-            stage = (Stage) MainPane.getScene().getWindow();
-            stage.setScene(scene);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     int j = 0;
     int k = 0;
-    public boolean me(int k){
-        return  k > 0 ? true : false;
-    }
+
 
     @FXML
     void initialize() {
@@ -168,9 +157,7 @@ public class SignInController {
 
         SignUpLink.setOnAction(event -> {
             FadeOutDownBig animation = new FadeOutDownBig(Vbox);
-            animation.setOnFinished(event1 -> {
-                showScene("/sample/fxml/SignUp1.fxml");
-            });
+            animation.setOnFinished(event1 -> showScene("/sample/fxml/SignUp1.fxml"));
             animation.play();
             i = 0;
         });
@@ -183,7 +170,6 @@ public class SignInController {
         Matcher matcher = pattern.matcher(password);
         return matcher.matches();
     }
-
     private void signInUser(String email, String pass, ActionEvent event) {
         DatabaseHandler Handler = new DatabaseHandler();
         if (StaticSubject.error_code == 0) {
@@ -218,48 +204,67 @@ public class SignInController {
             new FadeIn(SignUpLabel).play();
         }
         else {
-            SignUpLabel.setPrefWidth(400);
-            SignUpLink.setPrefWidth(0);
-            SignUpLabel.setText("Успешно");
-            SignUpLabel.setTextFill(Paint.valueOf("green"));
-            SignUpLink.setVisible(false);
-            SignUpLabel.setAlignment(Pos.CENTER);
+            FadeOut animation = new FadeOut(SignUpLabel);
+            animation.play();
+            animation.setOnFinished(event1 -> {
+                User user = new User(email, pass);
+                int cntr = 0;
+                try {
+                    ResultSet result = Handler.getUser(user);
+                    while(result.next()) {
+                        System.out.print(result.getString("user_name"));
+                        cntr++;
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
 
-            User user = new User(email, pass);
-            int cntr = 0;
-            try {
-                ResultSet result = Handler.getUser(user);
-                while(result.next()) {
-                    System.out.print(result.getString("user_name"));
-                    cntr++;
                 }
-            } catch (SQLException e) {
-                e.printStackTrace();
+                if (cntr == 1) {
 
-            }
+                    SignUpLabel.setPrefWidth(400);
+                    SignUpLink.setPrefWidth(0);
+                    SignUpLabel.setOpacity(0);
+                    SignUpLabel.setText("Успешно");
+                    SignUpLabel.setTextFill(Paint.valueOf("green"));
+                    SignUpLink.setVisible(false);
+                    SignUpLabel.setAlignment(Pos.CENTER);
+                    FadeIn signUpLabelAnimation = new FadeIn(SignUpLabel);
+                    signUpLabelAnimation.setOnFinished(event2 -> {
+                        FadeOut animation2 = new FadeOut(Vbox);
+                        animation2.setOnFinished(event3 -> showScene("/sample/fxml/reMain.fxml"));
+                        animation2.play();
+                    });
+                    signUpLabelAnimation.setDelay(Duration.millis(750));
+                    signUpLabelAnimation.play();
+                }
+                else {
+                    new FadeIn(SignUpLabel).play();
+                    new Shake(EmailField).play();
+                    new Shake(PasswordField).play();
+                    SignUpLabel.setPrefWidth(365);
+                    SignUpLink.setPrefWidth(75);
+                    SignUpLabel.setText("Неверный пароль или адрес электронной почты");
+                    SignUpLabel.setTextFill(Paint.valueOf("#b41107"));
+                    SignUpLink.setVisible(false);
+                    SignUpLabel.setAlignment(Pos.CENTER_RIGHT);
 
-            if (cntr == 1) {
-                FadeOut animation = new FadeOut(Vbox);
-                animation.setOnFinished(event1 -> {
-                    showScene("/sample/fxml/reMain.fxml");
-                });
-                animation.setDelay(Duration.millis(750));
-                animation.play();
-            }
-            else {
-                new Shake(EmailField).play();
-                new Shake(PasswordField).play();
-                SignUpLabel.setPrefWidth(365);
-                SignUpLink.setPrefWidth(75);
-                SignUpLabel.setText("Неверный пароль или адрес электронной почты");
-                SignUpLabel.setTextFill(Paint.valueOf("#b41107"));
-                SignUpLink.setVisible(false);
-                SignUpLabel.setAlignment(Pos.CENTER_RIGHT);
-            }
+                }
+            });
+
         }
     }
 
+    public void showScene(String window) {
+        try {
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(window)));
+            scene = new Scene(root);
+            stage = (Stage) MainPane.getScene().getWindow();
+            stage.setScene(scene);
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 
