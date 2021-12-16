@@ -1,4 +1,4 @@
 # Project exclude paths
-/Configs.java/
+/src/sample/database/Configs.java
 /out/
 
