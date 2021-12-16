@@ -1,0 +1,462 @@
+@font-face {
+	src: url('fonts/Metropolis-Regular.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-RegularItalic.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-Black.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-BlackItalic.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-Bold.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-BoldItalic.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-ExtraBold.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-ExtraBoldItalic.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-ExtraLight.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-ExtraLightItalic.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-Light.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-LightItalic.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-Medium.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-MediumItalic.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-SemiBold.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-SemiBoldItalic.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-Thin.otf');
+}
+
+@font-face {
+	src: url('fonts/Metropolis-ThinItalic.otf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-Thin.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-ThinItalic.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-Regular.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-Black.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-BlackItalic.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-Bold.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-BoldItalic.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-ExtraBold.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-ExtraBoldItalic.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-ExtraLight.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-ExtraLightItalic.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-Light.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-LightItalic.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-Medium.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-MediumItalic.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-SemiBold.ttf');
+}
+
+@font-face {
+	src: url('fonts/FiraSans-SemiBoldItalic.ttf');
+}
+
+
+.hiLabel {
+	-fx-font-family: 'Fira Sans';
+	-fx-font-size: 20;
+	-fx-text-fill: #0D627C;
+}
+
+
+.MainButton {
+	-fx-font-family: 'Fira Sans Medium';
+	-fx-font-size: 20;
+	-fx-text-fill: #4AB0BD;
+	-fx-background-color: transparent;
+	-fx-border-color: linear-gradient(to right bottom, #7EC7BC 15%, #1698BE);
+	-fx-background-radius: 25;
+	-fx-border-radius: 25;
+	-fx-border-width: 2;
+}
+
+
+
+
+.MainButton:hover {
+	-fx-font-family: 'Fira Sans Medium';
+	-fx-font-size: 20;
+	-fx-text-fill: white;
+	-fx-background-color: linear-gradient(to right bottom, #7EC7BC 15%, #1698BE);
+	-fx-border-color:transparent ;
+	-fx-background-radius: 25;
+	-fx-border-radius: 25;
+	-fx-animation: slide;
+
+}
+
+
+
+.AdminButton {
+	-fx-font-family: 'Fira Sans Medium';
+	-fx-font-size: 18;
+	-fx-text-fill: white;
+	-fx-background-color: linear-gradient(to right bottom, #7EC7BC 15%, #1698BE);
+	-fx-background-radius: 25;
+}
+
+
+
+
+
+.AdminButton:hover {
+	-fx-font-family: 'Fira Sans Medium';
+	-fx-font-size: 18;
+	-fx-font-color: "white";
+	-fx-background-color: linear-gradient(to right bottom, #A0D6CE, #22ABD3);
+	-fx-background-radius: 25;
+}
+
+
+
+.CircleButton {
+	-fx-font-family: 'Fira Sans Medium';
+	-fx-font-size: 20;
+	-fx-text-fill: white;
+	-fx-background-color: #07AAB4;
+	-fx-background-radius: 25;
+
+}
+
+.CircleButton:hover {
+	-fx-font-family: 'Fira Sans Medium';
+	-fx-font-size: 20;
+	-fx-text-fill: white;
+	-fx-background-color: #61C1D1;
+
+	-fx-background-radius: 25;
+}
+
+.CircleButtonShadow {
+	-fx-font-family: 'Fira Sans Medium';
+	-fx-font-size: 20;
+	-fx-text-fill: white;
+	-fx-background-color: #61C1D1;
+	-fx-background-radius: 25;
+	-fx-effect: dropshadow( gaussian , rgba(1,1,1,0.25) , 18, 0.0 , 0 , 7);
+}
+
+
+
+.field {
+	-fx-font-family: 'Fira Sans Light';
+	-fx-text-fill: #0D627C;
+	-fx-background-color: rgba(1,1,1,0.075);
+	-fx-alignment: CENTER;
+	-fx-font-size: 18;
+	-fx-highlight-text-fill:black ;
+	-fx-highlight-fill: #4AB0BD;
+
+}
+
+.field:focused{
+	-fx-highlight-text-fill:black ;
+	-fx-highlight-fill: #4AB0BD;
+	-fx-prompt-text-fill: rgba(1,1,1,0.15);
+
+}
+
+
+
+
+
+
+.signLink {
+	-fx-padding: 0;
+	-fx-font-family: 'Fira Sans';
+	-fx-text-fill: rgba(255,255,255,0.8);
+}
+
+.signLink:focused {
+	-fx-underline: true;
+	-fx-font-size: 13;
+	-fx-border-color: transparent;
+	-fx-border-style: solid;
+	-fx-border-width: 1px;
+}
+
+.signLink:hover{
+	-fx-font-size: 13;
+}
+
+.signLabel {
+	-fx-font-family: 'Fira Sans';
+	-fx-text-fill: rgba(255,255,255,0.8);
+}
+
+
+
+.MainVbox{
+	-fx-background-color: rgba(255,255,255, 0.8);
+	-fx-background-radius: 25 25 0 0;
+	-fx-effect: dropshadow( gaussian , rgba(1,1,1,0.25) , 18, 0.0 , 0 , 7);
+
+}
+
+
+
+
+a {
+	-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	display: block;
+	margin: 20px auto;
+	max-width: 180px;
+	text-decoration: none;
+	border-radius: 4px;
+	-fx-padding: 20px 30px;
+}
+
+
+
+
+
+
+
+.MainVbox2{
+	-fx-background-color: rgba(255,255,255, 0.8);
+	-fx-background-radius: 25;
+	-fx-effect: dropshadow( gaussian , rgba(1,1,1,0.25) , 18, 0.0 , 0 , 7);
+
+}
+.ErrorLabel{
+	-fx-font-family: "Fira Sans";
+	-fx-text-fill: rgba(255,255,255,0.8);
+	-fx-background-color: rgba(255,255,255,0.3);
+	-fx-background-radius: 0 0 25 25;
+	-fx-effect: dropshadow( gaussian , rgba(1,1,1,0.25) , 18, 0.0 , 0 , 7);
+}
+
+.ErrorHbox{
+	-fx-text-fill: rgba(255,255,255,0.8);
+	-fx-background-color: rgba(255,255,255,0.3);
+	-fx-background-radius: 0 0 25 25;
+	-fx-effect: dropshadow( gaussian , rgba(1,1,1,0.25) , 18, 0.0 , 0 , 7);
+}
+.HeaderLabel{
+	-fx-font-family: "Fira Sans Medium";
+	-fx-text-fill: #07AAB4;
+	-fx-font-size: 40;
+	-fx-background-radius: 25 25 0 0;
+}
+
+
+
+.mainpain {
+	-fx-background: linear-gradient(to right bottom, #7EC7BC 15%, #1698BE);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*.combo-box-base {
+	-fx-background-color: rgba(1, 1, 1, 0.075);
+}
+
+.combo-box > .list-cell{
+	-fx-font-family: "Fira Sans Light";
+	-fx-font-size: 18;
+	-fx-text-fill: rgba(1,1,1,0.8);
+	-fx-alignment: center;
+}
+.combo-box-base > .arrow-button {
+	-fx-background-radius: 0 3 3 0, 0 2 2 0, 0 1 1 0;
+	-fx-padding: 0.5em 0.667em 0.5em 0.833333em; /* 6 8 6 10 */
+	-fx-background-color: transparent;
+}
+
+.combo-box-base > .text-field{
+	-fx-background-color: green;
+	-fx-background-insets: 1 0 1 1;
+	-fx-background-radius: 2 0 0 2;
+}
+
+*.scroll-bar:vertical>*.increment-button>*.increment-arrow{
+	-fx-effect: dropshadow(two-pass-box , rgba(0,0,0,0.25), 1, 0.0 , 0, 1.4);
+}
+*.scroll-bar:vertical>*.decrement-button>*.decrement-arrow{
+	-fx-effect: dropshadow(two-pass-box , rgba(0,0,0,0.25), 1, 0.0 , 0, 1.4);
+}
+*.scroll-bar:horizontal>*.increment-button>*.increment-arrow{
+	-fx-effect: dropshadow(two-pass-box , rgba(0,0,0,0.25), 1, 0.0 , 0, 1.4);
+}
+*.scroll-bar:horizontal>*.decrement-button>*.decrement-arrow{
+	-fx-effect: dropshadow(two-pass-box , rgba(0,0,0,0.25), 1, 0.0 , 0, 1.4);
+}
+
+.heading {
+	-fx-background-color: linear-gradient(to right bottom ,#7EC7BC, #1698BE);
+	-fx-alignment: center;
+	-fx-background-radius: 25 25 0 0;
+	-fx-pref-width: 200;
+	-fx-pref-height: 50;
+	-fx-text-alignment: center;
+	-fx-font-family: "Metropolis Thin";
+	-fx-font-size: 25;
+	-fx-text-fill: white;
+}
+
+.vbox {
+	-fx-background-color: white;
+	-fx-pref-height: 525;
+	-fx-pref-width: 275;
+
+}
+
+.vbox1 {
+	-fx-pref-height: 380;
+	-fx-pref-width: 275;
+	-fx-padding: 50 25 50 50;
+}
+
+.vbox2 {
+	-fx-pref-height: 380;
+	-fx-pref-width: 275;
+	-fx-padding: 50 50 50 25;
+}
+
+#mainLabel {
+	-fx-font-family: "Metropolis Medium";
+	-fx-font-size: 20;
+}
+
+
+#DONE {
+	-fx-font-family: 'Metropolis-Thin'; 
+	-fx-font-size: 50;	
+}
+
+
+
+
+
+
+
+
+
+.tabButton {
+
+	-fx-pref-width: 200;
+	-fx-pref-height: 50;
+	-fx-font-family: 'Metropolis-Bold';
+	-fx-font-size: 20;
+	-fx-font-color: "white";
+	-fx-background-color: linear-gradient(to right bottom, #7EC7BC, #1698BE);
+	-fx-background-radius: 0;
+}
+
+.tabButton:hover {
+
+
+	-fx-font-family: 'Metropolis-Bold';
+	-fx-font-size: 20;
+	-fx-font-color: "white";
+	-fx-background-color: linear-gradient(to right bottom, #A0D6CE, #22ABD3);
+
+}

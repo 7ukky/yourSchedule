@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta charset="windows-1251">
+<style>
+input.tim{width=20pt}
+input.tim_tx{color=lightgreen; background-color=black; text-align=right;}
+</style>
+<script>
+var Y=0;
+var Oper="";
+var kod_t=true;
+var d;
+var zk=true;
+var priz_op=false;
+function Operac(){
+           if(Oper=="+") Y=Y*1+d*1;
+           if(Oper=="*") Y*=d;
+           if(Oper=="-") Y-=d;
+           if(Oper=="^") Y=Y^d;
+           if(Oper=="/") {if(Math.abs(d)>0.000000000001) Y/=d; }
+           if(Oper=="") Y=d;
+            return Y;
+                 }
+
+function GO_to_D(m){ 
+d=form_calculus.text_date.value;
+if(m>=0 && m<=9)  {if(zk) {d=""; zk=false;}  priz_op=false; d+=m;  }           
+if(m=="<<")  {sw=d.slice(d.length-1);
+              if(sw==".") kod_t=true; d=d.slice(0,d.length-1);
+              priz_op=false; }
+if(m=="~") d=-d; 
+if(m==".")   {if(kod_t) {if(zk) {d=""; zk=false;} priz_op=false; d+=m;} kod_t=false; }  
+if(m=="CK") {d=""; kod_t=true; priz_op=false;}
+if(m=="C"){d=""; Y=0; kod_t=true; priz_op=false;zk=true;Oper="";}
+if(m=="=") {d=Operac(); Oper=""; priz_op=false; }
+if(m=="*" || m=="/" || m=="-"|| m=="+" || m=="^")
+        {if(!priz_op) d= Operac(); zk=true; Oper=m; priz_op=true;}
+          
+form_calculus.text_date.value=d; 
+                    }
+
+
+
+function kalendar(){ 
+
+var mas_b =new Array("0",".","~","+","C","1","2","3","-","CK",
+                      "4","5","6","*","<<","7","8","9","/","=","^");
+document.write("<FORM ID=form_calculus style=\"width:180; \">");
+document.write("<fieldset name=f4 style=\"background-color:silver;\">");
+document.write("<center>");
+document.write("<INPUT Name=text_date readonly class=tim_tx Type=text size=22  ><br><br>");
+kk=0;
+for(var j=1;j<=4;j++) {for(var i=1;i<=5;i++){
+                     document.write("<INPUT Type=button class=tim value=\""
+                                     +mas_b[kk]+"\" onClick=\"GO_to_D('"
+                                     +mas_b[kk]+"');\"  >");
+		if(i==3)document.write("&nbsp&nbsp");
+                             kk++;
+                                                                 }
+                     document.write("<br>");
+                                }
+document.write("<br>");
+document.write("</center>");
+document.write("</FIELDSET>");
+document.write("</FORM>");
+}
+</script>
+</head>
+<body>
+<script>
+kalendar();
+</script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1150.0" styleClass="mainPane" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.MainController">
+   <children>
+      <BorderPane styleClass="borderPane" stylesheets="@../css/main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" hmax="0.0" pannable="true" prefHeight="750.0" prefWidth="600.0" styleClass="scrollPane" stylesheets="@../css/main.css" BorderPane.alignment="TOP_CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <content>
+                  <HBox fx:id="Hbox" alignment="CENTER" focusTraversable="true" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" spacing="50.0" styleClass="PannelVbox" stylesheets="@../css/main.css">
+                     <children>
+                        <VBox fx:id="LeftVbox" alignment="TOP_CENTER" focusTraversable="true" spacing="50.0" stylesheets="@../css/main.css" HBox.hgrow="NEVER">
+                           <children>
+                              <VBox fx:id="Vbox1" alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" style="-fx-background-radius: 25 25 25 25;" styleClass="Pannel" stylesheets="@../css/main.css" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 25 25 0 0;" styleClass="LectureHeading" stylesheets="@../css/main.css" text="Лекция">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans ExtraLight Italic" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0" styleClass="LectureTime" stylesheets="@../css/main.css" text="9:00 - 10:20">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Medium" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="90.0" prefWidth="200.0" styleClass="LectureName" stylesheets="@../css/main.css" text="CиБД" wrapText="true">
+                                       <font>
+                                          <Font name="Fira Sans Medium" size="36.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="30.0" prefWidth="200.0" styleClass="LectureTeacher" stylesheets="@../css/main.css" text="Лапич С. В.">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="200.0" styleClass="LectureTeacher" stylesheets="@../css/main.css" text="2/103">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 0 0 25 25;" styleClass="LectureEnding" stylesheets="@../css/main.css">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Metropolis-Light" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox id="Vbox5" fx:id="Vbox3" alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" style="-fx-background-radius: 25 25 25 25;" styleClass="Pannel" stylesheets="@../css/main.css">
+                                 <children>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 25 25 0 0;" styleClass="LaboratoryHeading" stylesheets="@../css/main.css" text="Лабораторная">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light Italic" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0" styleClass="LaboratoryTime" text="12:10 - 13:30">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Medium" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="90.0" prefWidth="200.0" styleClass="LaboratoryName" text="ММТИиУ" wrapText="true">
+                                       <font>
+                                          <Font name="Fira Sans Medium" size="36.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="30.0" prefWidth="200.0" styleClass="LaboratoryTeacher" text="Дереченник С. С.">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="200.0" styleClass="LaboratoryTeacher" text="402">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 0 0 25 25;" styleClass="LaboratoryEnding" stylesheets="@../css/main.css">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Metropolis-Light" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="Vbox5" alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" style="-fx-background-radius: 25 25 25 25;" styleClass="Pannel" stylesheets="@../css/main.css">
+                                 <children>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 25 25 0 0;" stylesheets="@../css/main.css" text="Лекция">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light Italic" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0" text="9:00 - 10:20">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Medium" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="90.0" prefWidth="200.0" text="ЦОС" wrapText="true">
+                                       <font>
+                                          <Font name="Fira Sans Medium" size="36.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="30.0" prefWidth="200.0" text="Kovalenko Y. V.">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="200.0" text="402">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 0 0 25 25;" stylesheets="@../css/main.css">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Metropolis-Light" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="50.0" top="50.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="RightVbox" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" spacing="50.0" stylesheets="@../css/main.css">
+                           <children>
+                              <VBox alignment="BOTTOM_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="200.0" style="-fx-background-radius: 0 0 25 25;" styleClass="Pannel" stylesheets="@../css/main.css" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Label fx:id="DateLabel" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" stylesheets="@../css/main.css" text="24 нояб 2021">
+                                       <font>
+                                          <Font name="Fira Sans Light" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="TimeLabel" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="Lec" stylesheets="@../css/main.css" text="1:53">
+                                       <font>
+                                          <Font name="Fira Sans Light" size="40.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="DayLabel" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 0 0 25 25;" styleClass="LectureHeading" stylesheets="@../css/main.css" text="Воскресенье">
+                                       <font>
+                                          <Font name="Fira Sans Light Italic" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="Vbox2" alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" style="-fx-background-radius: 25 25 25 25;" styleClass="Pannel" stylesheets="@../css/main.css">
+                                 <children>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 25 25 0 0;" styleClass="PracticeHeading" stylesheets="@../css/main.css" text="Практика" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans ExtraLight" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0" styleClass="PracticeTime" text="10:40 - 12:00" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Medium" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="90.0" prefWidth="200.0" styleClass="PracticeName" text="ВМС" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="Fira Sans Medium" size="36.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="30.0" prefWidth="200.0" styleClass="PracticeRoom" text="Лапич С. В." textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="200.0" styleClass="PracticeRoom" text="2/401б" textFill="WHITE">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 0 0 25 25;" styleClass="PracticeEnding" stylesheets="@../css/main.css">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Metropolis-Light" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="Vbox4" alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" style="-fx-background-radius: 25 25 25 25;" styleClass="Pannel" stylesheets="@../css/main.css">
+                                 <children>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 25 25 0 0;" stylesheets="@../css/main.css" text="Семинар">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light Italic" size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="200.0" stylesheets="@../css/main.css" text="14:00 - 15:20">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Medium" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="90.0" prefWidth="200.0" stylesheets="@../css/main.css" text="Синтезввв цифровыхчччччч аппаратов" wrapText="true">
+                                       <font>
+                                          <Font name="Fira Sans SemiBold" size="36.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="30.0" prefWidth="200.0" stylesheets="@../css/main.css" text="Kovalenko Y. V.">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="200.0" stylesheets="@../css/main.css" text="402">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Fira Sans Light Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="TOP_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 0 0 25 25;" stylesheets="@../css/main.css">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Metropolis-Light" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="100.0" />
+                     </padding>
+                  </HBox>
+               </content>
+            </ScrollPane>
+         </center>
+         <left>
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="550.0" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets left="100.0" right="50.0" top="50.0" />
+               </padding>
+               <children>
+                  <VBox id="MenuVbox" fx:id="MenuVbox" alignment="TOP_CENTER" fillWidth="false" prefHeight="475.0" prefWidth="400.0" spacing="25.0" style="-fx-background-radius: 25;" styleClass="MenuVbox" stylesheets="@../css/main.css">
+                     <children>
+                        <DatePicker fx:id="datePicker" prefHeight="50.0" prefWidth="300.0" stylesheets="@../css/main.css">
+                           <VBox.margin>
+                              <Insets bottom="100.0" />
+                           </VBox.margin></DatePicker>
+                        <Button fx:id="SettingsButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-radius: 25;" styleClass="MainButton" stylesheets="@../css/application.css" text="Настройки" textFill="#692323">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="DownloadButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-radius: 25;" styleClass="MainButton" stylesheets="@../css/application.css" text="Сохранить расписание" textFill="#692323">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="SignInButton2" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-radius: 25;" styleClass="MainButton" stylesheets="@../css/application.css" text="Выйти из аккаунта" textFill="#692323">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

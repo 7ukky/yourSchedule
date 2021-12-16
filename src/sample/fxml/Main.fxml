@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainpain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="900.0" styleClass="mainpain" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="50.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1900.0" prefWidth="800.0" style="-fx-background-color: #ffffff; -fx-background-radius: 25;" stylesheets="@../css/application.css">
+         <left>
+            <VBox fx:id="VBox1" fillWidth="false" prefHeight="526.0" prefWidth="200.0" spacing="25.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button maxWidth="200.0" minWidth="50.0" mnemonicParsing="false" styleClass="tabButton" stylesheets="@application.css" text="Schedule" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button maxWidth="200.0" minWidth="50.0" mnemonicParsing="false" styleClass="tabButton" stylesheets="@application.css" text="Settings" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button maxWidth="200.0" minWidth="50.0" mnemonicParsing="false" styleClass="tabButton" stylesheets="@application.css" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <ScrollPane id="scrollPane" hbarPolicy="NEVER" stylesheets="@../css/application.css" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+               <content>
+                  <AnchorPane prefHeight="525.0" prefWidth="550.0" style="-fx-background-color: white;">
+                     <children>
+                        <VBox alignment="CENTER" fillWidth="false" styleClass="vbox1" stylesheets="@../css/application.css">
+                           <children>
+                              <Label id="monHeading" styleClass="heading" text="1-st">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label id="sub" prefHeight="50.0" prefWidth="65.0" styleClass="subTime" text="9:00 - 10:20" textFill="#9c2c2c">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subName" text="DataBases" textFill="#9c2c2c" />
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subTeacher" text="Kovalenko V. Y." textFill="#9c2c2c" />
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subRoom" stylesheets="@../css/application.css" text="432 aud." textFill="#9c2c2c" />
+                              <Label id="monEnding" styleClass="ending" text="Lecture" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" fillWidth="false" layoutY="330.0" styleClass="vbox1" stylesheets="@../css/application.css">
+                           <children>
+                              <Label id="monHeading" styleClass="heading" text="1-st">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label id="sub" prefHeight="50.0" prefWidth="65.0" styleClass="subTime" text="9:00 - 10:20" textFill="#9c2c2c">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subName" text="DataBases" textFill="#9c2c2c" />
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subTeacher" text="Kovalenko V. Y." textFill="#9c2c2c" />
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subRoom" stylesheets="@../css/application.css" text="432 aud." textFill="#9c2c2c" />
+                              <Label id="monEnding" styleClass="ending" text="Lecture" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" fillWidth="false" layoutX="275.0" layoutY="165.0" styleClass="vbox2" stylesheets="@../css/application.css">
+                           <children>
+                              <Label id="monHeading" styleClass="heading" text="1-st">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label id="sub" prefHeight="50.0" prefWidth="65.0" styleClass="subTime" text="9:00 - 10:20" textFill="#9c2c2c">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subName" text="DataBases" textFill="#9c2c2c" />
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subTeacher" text="Kovalenko V. Y." textFill="#9c2c2c" />
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subRoom" stylesheets="@../css/application.css" text="432 aud." textFill="#9c2c2c" />
+                              <Label id="monEnding" styleClass="ending" text="Lecture" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" fillWidth="false" layoutX="275.0" layoutY="495.0" styleClass="vbox2" stylesheets="@../css/application.css">
+                           <children>
+                              <Label id="monHeading" styleClass="heading" text="1-st">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label id="sub" prefHeight="50.0" prefWidth="65.0" styleClass="subTime" text="9:00 - 10:20" textFill="#9c2c2c">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subName" text="DataBases" textFill="#9c2c2c" />
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subTeacher" text="Kovalenko V. Y." textFill="#9c2c2c" />
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subRoom" stylesheets="@../css/application.css" text="432 aud." textFill="#9c2c2c" />
+                              <Label id="monEnding" styleClass="ending" text="Lecture" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" fillWidth="false" layoutY="660.0" styleClass="vbox1" stylesheets="@../css/application.css">
+                           <children>
+                              <Label id="monHeading" styleClass="heading" text="1-st">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label id="sub" prefHeight="50.0" prefWidth="65.0" styleClass="subTime" text="9:00 - 10:20" textFill="#9c2c2c">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subName" text="DataBases" textFill="#9c2c2c" />
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subTeacher" text="Kovalenko V. Y." textFill="#9c2c2c" />
+                              <Label id="sub" prefHeight="50.0" prefWidth="200.0" styleClass="subRoom" stylesheets="@../css/application.css" text="432 aud." textFill="#9c2c2c" />
+                              <Label id="monEnding" styleClass="ending" text="Lecture" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="mainLabel" contentDisplay="CENTER" layoutX="130.0" layoutY="200.0" prefHeight="96.0" prefWidth="341.0" text="Welcome to the Your Schedule. Here you can check you Schedule!" visible="false" wrapText="true">
+               <font>
+                  <Font name="Metropolis-Light" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

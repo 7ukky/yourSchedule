@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1150.0" styleClass="mainpain" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AddController4">
+   <children>
+      <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="322.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="400.0" stylesheets="@../css/application.css" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="375.0" AnchorPane.rightAnchor="375.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="500.0" prefWidth="400.0" spacing="25.0" styleClass="MainVbox" stylesheets="@../css/application.css" VBox.vgrow="NEVER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="300.0" styleClass="hiLabel" text="4. Укажите номер аудитории и выберите время начала и конца занятия" textAlignment="CENTER" wrapText="true" />
+                  <HBox prefHeight="50.0" prefWidth="300.0" spacing="25.0">
+                     <children>
+                        <ComboBox fx:id="StartHourComboBox" prefHeight="50.0" prefWidth="137.5" promptText="Начало(Ч)" style="-fx-background-radius: 25;" styleClass="text-field" stylesheets="@../css/main.css" />
+                        <ComboBox fx:id="StartMinuteComboBox" prefHeight="50.0" prefWidth="137.5" promptText="Начало(М)" style="-fx-background-radius: 25;" styleClass="text-field" stylesheets="@../css/main.css" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="300.0" spacing="25.0">
+                     <children>
+                        <ComboBox fx:id="EndHourComboBox" prefHeight="50.0" prefWidth="137.5" promptText="Конец(Ч)" style="-fx-background-radius: 25;" styleClass="text-field" stylesheets="@../css/main.css" />
+                        <ComboBox fx:id="EndMinuteComboBox" prefHeight="50.0" prefWidth="137.5" promptText="Конец(М)" style="-fx-background-radius: 25;" styleClass="text-field" stylesheets="@../css/main.css" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="300.0" spacing="25.0">
+                     <children>
+                        <RadioButton fx:id="RadioButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="138.0" stylesheets="@../css/main.css" text="Отобразить только   в указанный день" wrapText="true" />
+                        <DatePicker fx:id="datePicker" prefHeight="50.0" prefWidth="137.5" stylesheets="@../css/main.css" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="NextButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-radius: 25;" styleClass="MainButton" stylesheets="@../css/application.css" text="Далее" textFill="#692323">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" right="50.0" top="50.0" />
+               </padding>
+            </VBox>
+            <Label fx:id="ErrorLabel" alignment="CENTER" prefHeight="50.0" prefWidth="400.0" styleClass="ErrorLabel" stylesheets="@../css/application.css" text="Нет аккаунта? Создать аккаунт" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
