@@ -205,7 +205,9 @@ public class SignInController {
         }
         else {
             FadeOut animation = new FadeOut(SignUpLabel);
+            new FadeOut(SignUpLink).play();
             animation.play();
+
             animation.setOnFinished(event1 -> {
                 User user = new User(email, pass);
                 int cntr = 0;

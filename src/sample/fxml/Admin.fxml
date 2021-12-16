@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane focusTraversable="true" prefHeight="750.0" prefWidth="1150.0" styleClass="mainPane" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.SettingsController">
+<AnchorPane fx:id="MainPane" focusTraversable="true" prefHeight="750.0" prefWidth="1150.0" styleClass="mainPane" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AdminController">
    <children>
-      <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="332.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="400.0" stylesheets="@../css/application.css" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="100.0">
+      <VBox fx:id="Vbox" alignment="TOP_CENTER" fillWidth="false" layoutX="332.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="400.0" stylesheets="@../css/application.css" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="100.0">
          <children>
             <VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="400.0" spacing="25.0" styleClass="MainVbox" stylesheets="@../css/application.css" VBox.vgrow="NEVER">
                <children>
@@ -42,13 +42,12 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="50.0" prefWidth="400.0" spacing="10.0">
                      <children>
-                        <Button fx:id="ChangeButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" styleClass="AdminButton" stylesheets="@../css/application.css" text="Изменить  группу">
+                        <Button fx:id="AddGroupButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" styleClass="AdminButton" stylesheets="@../css/application.css" text="Добавить группу">
                            <font>
                               <Font size="41.0" />
                            </font>
                         </Button>
-                        <Button fx:id="DeleteButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="MainButton" stylesheets="@../css/application.css" text="У" />
-                        <Button fx:id="AddButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="MainButton" stylesheets="@../css/application.css" text="Д" />
+                        <Button fx:id="DeleteGroupButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="MainButton" stylesheets="@../css/application.css" text="У" />
                      </children>
                      <padding>
                         <Insets left="50.0" right="50.0" />
@@ -59,13 +58,12 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="50.0" prefWidth="400.0" spacing="10.0">
                      <children>
-                        <Button fx:id="ChangeButton1" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" styleClass="AdminButton" stylesheets="@../css/application.css" text="Изменить занятие">
+                        <Button fx:id="AddSubjectButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" styleClass="AdminButton" stylesheets="@../css/application.css" text="Добавить занятие">
                            <font>
                               <Font size="41.0" />
                            </font>
                         </Button>
-                        <Button fx:id="DeleteButton2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="MainButton" stylesheets="@../css/application.css" text="У" />
-                        <Button fx:id="AddButton3" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="MainButton" stylesheets="@../css/application.css" text="Д" />
+                        <Button fx:id="DeleteSubjectButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="MainButton" stylesheets="@../css/application.css" text="У" />
                      </children>
                      <padding>
                         <Insets left="50.0" right="50.0" />
@@ -81,7 +79,7 @@
             </VBox>
             <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="400.0" styleClass="ErrorHbox">
                <children>
-                  <Label fx:id="SignInLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="400.0" styleClass="signLabel" stylesheets="@../css/application.css" textFill="WHITE">
+                  <Label fx:id="ErrorLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="400.0" styleClass="signLabel" stylesheets="@../css/application.css" textFill="WHITE">
                      <font>
                         <Font name="Fira Sans Regular" size="13.0" />
                      </font>

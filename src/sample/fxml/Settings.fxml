@@ -2,31 +2,69 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane focusTraversable="true" prefHeight="750.0" prefWidth="1150.0" styleClass="mainPane" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.SettingsController">
+<AnchorPane fx:id="MainPane" focusTraversable="true" prefHeight="750.0" prefWidth="1150.0" styleClass="mainPane" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.SettingsController">
    <children>
-      <BorderPane prefHeight="750.0" prefWidth="1150.0" styleClass="borderPane" stylesheets="@../css/main.css">
-         <padding>
-            <Insets bottom="175.0" left="100.0" right="300.0" top="50.0" />
-         </padding>
-         <center>
-            <VBox prefHeight="200.0" prefWidth="822.0" style="-fx-background-color: lightgrey;" BorderPane.alignment="CENTER">
+      <VBox fx:id="Vbox" alignment="TOP_CENTER" fillWidth="false" layoutX="332.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="400.0" stylesheets="@../css/application.css" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="375.0" AnchorPane.rightAnchor="375.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="400.0" spacing="25.0" styleClass="MainVbox" stylesheets="@../css/application.css">
                <children>
-                  <Button fx:id="ChangeButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" styleClass="MainButton" stylesheets="@../css/application.css" text="Изменить запись о паре" />
-                  <Button fx:id="DeleteButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" styleClass="MainButton" stylesheets="@../css/application.css" text="Удалить запись о паре" />
-                  <Button fx:id="AddButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" styleClass="MainButton" stylesheets="@../css/application.css" text="Добавить запись о паре" />
+                  <HBox fillHeight="false" prefHeight="75.0" prefWidth="400.0" spacing="25.0">
+                     <children>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="25.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="CircleButtonShadow" AnchorPane.rightAnchor="0.0">
+                                 <font>
+                                    <Font name="Fira Sans ExtraBold" size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="BackButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="CircleButton" text="←" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Fira Sans ExtraBold" size="22.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="100.0" prefWidth="300.0" styleClass="HeaderLabel" text="Настройки" textAlignment="CENTER" wrapText="true">
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Button fx:id="AdminButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-radius: 25;" styleClass="MainButton" stylesheets="@../css/application.css" text="Панель администратора" textFill="#692323">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="LogOutButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-radius: 25;" styleClass="MainButton" stylesheets="@../css/application.css" text="Выйти из аккаунта" textFill="#692323">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
                </children>
-               <BorderPane.margin>
-                  <Insets />
-               </BorderPane.margin>
                <padding>
-                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                  <Insets top="50.0" />
                </padding>
             </VBox>
-         </center>
-      </BorderPane>
+            <HBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="400.0" styleClass="ErrorHbox">
+               <children>
+                  <Label fx:id="SignUpLabel" alignment="CENTER" prefHeight="50.0" prefWidth="400.0" styleClass="signLabel" stylesheets="@../css/application.css" text="Выберите пункт меню" textFill="WHITE">
+                     <font>
+                        <Font name="Fira Sans Regular" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

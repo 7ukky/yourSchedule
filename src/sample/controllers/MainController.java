@@ -5,29 +5,26 @@ import com.itextpdf.text.DocumentException;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import sample.PDF.PDF;
-import sample.animations.Drag;
+
 import sample.animations.MyZoom;
-import sample.animations.Shake;
 import sample.database.Const;
 import sample.database.DatabaseHandler;
 import sample.database.Subject;
-
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -42,6 +39,9 @@ import java.time.format.DateTimeFormatter;
 
 
 public class MainController {
+
+    @FXML
+    private AnchorPane MainPane;
 
     @FXML
     private Label DateLabel, DayLabel, TimeLabel;
@@ -102,7 +102,11 @@ public class MainController {
         });
 
         SettingsButton.setOnAction(event -> {
-            showScene("/sample/fxml/Settings.fxml",event);
+            ZoomOut animation1 = new ZoomOut(MenuVbox);
+            SlideOutUp animation2 = new SlideOutUp(Hbox);
+            animation2.setOnFinished(event1 -> showScene("/sample/fxml/Settings.fxml"));
+            animation1.play();
+            animation2.play();
         });
 
         DownloadButton.setOnAction(event -> {
@@ -122,15 +126,7 @@ public class MainController {
                 PDF pdf = new PDF();
                 try {
                     pdf.getPDFofTable(fos);
-                } catch (DocumentException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                } catch (ClassNotFoundException e) {
+                } catch (DocumentException | IOException | URISyntaxException | SQLException | ClassNotFoundException e) {
                     e.printStackTrace();
                 }
             }
@@ -146,19 +142,11 @@ public class MainController {
         Vbox3.setOnMouseEntered(mouseDragEvent -> new MyZoom(Vbox3, "in").play());
         Vbox3.setOnMouseExited(mouseDragEvent -> new MyZoom(Vbox3, "out").play());
 
-
         Vbox4.setOnMouseEntered(mouseDragEvent -> new MyZoom(Vbox4, "in").play());
         Vbox4.setOnMouseExited(mouseDragEvent -> new MyZoom(Vbox4, "out").play());
 
         Vbox5.setOnMouseEntered(mouseDragEvent -> new MyZoom(Vbox5, "in").play());
         Vbox5.setOnMouseExited(mouseDragEvent -> new MyZoom(Vbox5, "out").play());
-
-//
-//        Hbox.setOnMouseMoved(mouseDragEvent -> {
-//            System.out.println(cntr);
-//            if(cntr > 10) cntr = 0;
-//        });
-
     }
 
     private void setAvailableSchedule() throws SQLException {
@@ -189,22 +177,27 @@ public class MainController {
             node.setVisible(true);
             label = (Label) node.getChildrenUnmodifiable().get(0);
             label.getStyleClass().clear();
-            if (result.getString(Const.SUBJECT_TYPE).equals(Const.LECTURE)) {
-                label.setText("Лекция");
-                type = "Lecture";
-                label.getStyleClass().add(type + "Heading");
-            } else if (result.getString(Const.SUBJECT_TYPE).equals(Const.SEMINAR)) {
-                label.setText("Семинар");
-                type = "Seminar";
-                label.getStyleClass().add(type + "Heading");
-            } else if (result.getString(Const.SUBJECT_TYPE).equals(Const.PRACTICE)) {
-                label.setText("Практика");
-                type = "Practice";
-                label.getStyleClass().add(type + "Heading");
-            } else if (result.getString(Const.SUBJECT_TYPE).equals(Const.LABORATORY)) {
-                label.setText("Лабораторная");
-                type = "Laboratory";
-                label.getStyleClass().add(type + "Heading");
+            switch (result.getString(Const.SUBJECT_TYPE)) {
+                case Const.LECTURE -> {
+                    label.setText("Лекция");
+                    type = "Lecture";
+                    label.getStyleClass().add(type + "Heading");
+                }
+                case Const.SEMINAR -> {
+                    label.setText("Семинар");
+                    type = "Seminar";
+                    label.getStyleClass().add(type + "Heading");
+                }
+                case Const.PRACTICE -> {
+                    label.setText("Практика");
+                    type = "Practice";
+                    label.getStyleClass().add(type + "Heading");
+                }
+                case Const.LABORATORY -> {
+                    label.setText("Лабораторная");
+                    type = "Laboratory";
+                    label.getStyleClass().add(type + "Heading");
+                }
             }
 
             label = (Label) node.getChildrenUnmodifiable().get(1);
@@ -242,22 +235,27 @@ public class MainController {
                 node.setVisible(true);
                 label = (Label) node.getChildrenUnmodifiable().get(0);
                 label.getStyleClass().clear();
-                if (result.getString(Const.SUBJECT_TYPE).equals(Const.LECTURE)) {
-                    label.setText("Лекция");
-                    type = "Lecture";
-                    label.getStyleClass().add(type + "Heading");
-                } else if (result.getString(Const.SUBJECT_TYPE).equals(Const.SEMINAR)) {
-                    label.setText("Семинар");
-                    type = "Seminar";
-                    label.getStyleClass().add(type + "Heading");
-                } else if (result.getString(Const.SUBJECT_TYPE).equals(Const.PRACTICE)) {
-                    label.setText("Практика");
-                    type = "Practice";
-                    label.getStyleClass().add(type + "Heading");
-                } else if (result.getString(Const.SUBJECT_TYPE).equals(Const.LABORATORY)) {
-                    label.setText("Лабораторная");
-                    type = "Laboratory";
-                    label.getStyleClass().add(type + "Heading");
+                switch (result.getString(Const.SUBJECT_TYPE)) {
+                    case Const.LECTURE -> {
+                        label.setText("Лекция");
+                        type = "Lecture";
+                        label.getStyleClass().add(type + "Heading");
+                    }
+                    case Const.SEMINAR -> {
+                        label.setText("Семинар");
+                        type = "Seminar";
+                        label.getStyleClass().add(type + "Heading");
+                    }
+                    case Const.PRACTICE -> {
+                        label.setText("Практика");
+                        type = "Practice";
+                        label.getStyleClass().add(type + "Heading");
+                    }
+                    case Const.LABORATORY -> {
+                        label.setText("Лабораторная");
+                        type = "Laboratory";
+                        label.getStyleClass().add(type + "Heading");
+                    }
                 }
 
                 label = (Label) node.getChildrenUnmodifiable().get(1);
@@ -474,16 +472,16 @@ public class MainController {
         return week;
     }
 
-    public void showScene(String window, ActionEvent event) {
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    public void showScene(String window) {
         try {
             root = FXMLLoader.load(getClass().getResource(window));
+            scene = new Scene(root);
+            stage = (Stage) MainPane.getScene().getWindow();
+            stage.setScene(scene);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
     }
 
 }

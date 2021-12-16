@@ -1,57 +1,52 @@
 package sample.controllers;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import animatefx.animation.*;
 import com.itextpdf.text.Anchor;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import javax.security.auth.login.LoginContext;
-import java.io.IOException;
+public class AdminController {
 
-public class SettingsController {
 
     @FXML
     private AnchorPane MainPane;
 
     @FXML
+    private Button DeleteGroupButton, DeleteSubjectButton, AddGroupButton, AddSubjectButton, BackButton;
+
+    @FXML
+    private Label ErrorLabel;
+
+    @FXML
     private VBox Vbox;
 
     @FXML
-    private Button AdminButton, LogOutButton, BackButton;
-
-    @FXML
     void initialize() {
-        Vbox.setOpacity(0);
-        new ZoomIn(Vbox).play();
 
-        AdminButton.setOnAction(event -> {
+        new FadeInUpBig(Vbox).play();
+
+        AddSubjectButton.setOnAction(event -> {
             FadeOutDownBig animation = new FadeOutDownBig(Vbox);
-            animation.setOnFinished(event1 -> showScene("/sample/fxml/Admin.fxml"));
-            animation.play();
+            animation.setOnFinished(event1 -> showScene("/sample/fxml/Add1.fxml"));
         });
-
-//        LogOutButton.setOnAction(event -> {
-//            showScene("/sample/fxml/Delete1.fxml", event);
-//        });
 
         BackButton.setOnAction(event -> {
-            ZoomOut animation = new ZoomOut(Vbox);
-            animation.setOnFinished(event1 -> showScene("/sample/fxml/reMain.fxml"));
-            animation.play();
-
+            SlideOutUp animation = new SlideOutUp(Vbox);
+            animation.setOnFinished(event1 -> showScene("/sample/fxml/Settings.fxml"));
         });
-    }
 
+    }
 
     public void showScene(String window) {
         try {
@@ -65,7 +60,4 @@ public class SettingsController {
         }
     }
 
-
 }
-
-
